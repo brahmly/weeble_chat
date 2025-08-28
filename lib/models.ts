@@ -1,0 +1,116 @@
+import { AiModel } from './types';
+
+// Base catalog; user can toggle/select up to 5
+export const MODEL_CATALOG: AiModel[] = [
+  {
+    id: 'gemini-2.5-pro',
+    label: 'Gemini 2.5 Pro',
+    provider: 'gemini',
+    model: 'gemini-2.5-pro',
+  },
+  {
+    id: 'gemini-2.5-flash',
+    label: 'Gemini 2.5 Flash',
+    provider: 'gemini',
+    model: 'gemini-2.5-flash',
+  },
+  {
+    id: 'deepcoder-14b-preview',
+    label: 'DeepCoder 14B Preview',
+    provider: 'openrouter',
+    model: 'agentica-org/deepcoder-14b-preview:free',
+    free: true,
+  },
+  {
+    id: 'deepseek-r1',
+    label: 'DeepSeek R1 (free)',
+    provider: 'openrouter',
+    model: 'deepseek/deepseek-r1:free',
+    free: true,
+  },
+  {
+    id: 'llama-3.3-70b-instruct',
+    label: 'Llama 3.3 70B Instruct (free)',
+    provider: 'openrouter',
+    model: 'meta-llama/llama-3.3-70b-instruct:free',
+    free: true,
+  },
+  // Additional OpenRouter models requested
+  {
+    id: 'mistral-small-24b-instruct-2501',
+    label: 'Mistral Small 24B Instruct 2501 (free)',
+    provider: 'openrouter',
+    model: 'mistralai/mistral-small-24b-instruct-2501:free',
+    free: true,
+  },
+  {
+    id: 'qwen-2.5-72b-instruct',
+    label: 'Qwen 2.5 72B Instruct (free)',
+    provider: 'openrouter',
+    model: 'qwen/qwen-2.5-72b-instruct:free',
+    free: true,
+  },
+  {
+    id: 'moonshot-kimi-k2',
+    label: 'Moonshot Kimi K2 (free)',
+    provider: 'openrouter',
+    model: 'moonshotai/kimi-k2:free',
+    free: true,
+  },
+  {
+    id: 'reka-flash-3',
+    label: 'Reka Flash 3 (free)',
+    provider: 'openrouter',
+    model: 'rekaai/reka-flash-3:free',
+    free: true,
+  },
+  {
+    id: 'sarvam-m',
+    label: 'Sarvam-M (free)',
+    provider: 'openrouter',
+    model: 'sarvamai/sarvam-m:free',
+    free: true,
+  },
+  {
+    id: 'hunyuan-a13b-instruct',
+    label: 'Tencent Hunyuan A13B Instruct (free)',
+    provider: 'openrouter',
+    model: 'tencent/hunyuan-a13b-instruct:free',
+    free: true,
+  },
+  {
+    id: 'gemma-3n-e2b-it',
+    label: 'Google Gemma 3n e2B IT (free)',
+    provider: 'openrouter',
+    model: 'google/gemma-3n-e2b-it:free',
+    free: true,
+  },
+  {
+    id: 'dolphin3-mistral-24b',
+    label: 'Dolphin 3.0 Mistral 24B (free)',
+    provider: 'openrouter',
+    model: 'cognitivecomputations/dolphin3.0-mistral-24b:free',
+    free: true,
+  },
+  {
+    id: 'gemma-2-9b-it',
+    label: 'Google Gemma 2 9B IT (free)',
+    provider: 'openrouter',
+    model: 'google/gemma-2-9b-it:free',
+    free: true,
+  },
+  {
+    id: 'shisa-v2-llama33-70b',
+    label: 'Shisa v2 Llama 3.3 70B (free)',
+    provider: 'openrouter',
+    model: 'shisa-ai/shisa-v2-llama3.3-70b:free',
+    free: true,
+  },
+  {
+    id: 'dolphin-mistral-24b-venice',
+    label: 'Dolphin Mistral 24B Venice (free)',
+    provider: 'openrouter',
+    model: 'cognitivecomputations/dolphin-mistral-24b-venice-edition:free',
+    free: true,
+  },
+];
