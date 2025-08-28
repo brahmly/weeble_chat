@@ -1,0 +1,318 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0rem;
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --card: #f8f9fa;
+  --card-foreground: #1a1a1a;
+  --popover: #ffffff;
+  --popover-foreground: #1a1a1a;
+  --primary: #ff6b35;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f3f4;
+  --secondary-foreground: #1a1a1a;
+  --muted: #f8f9fa;
+  --muted-foreground: #374151;
+  --accent: #ff6b35;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --border: #e5e7eb;
+  --input: #ffffff;
+  --ring: #ff6b35;
+  --chart-1: #ff6b35;
+  --chart-2: #e55a2b;
+  --chart-3: #cc4921;
+  --chart-4: #b33817;
+  --chart-5: #99270d;
+  --sidebar: #f8f9fa;
+  --sidebar-foreground: #1a1a1a;
+  --sidebar-primary: #ff6b35;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f1f3f4;
+  --sidebar-accent-foreground: #1a1a1a;
+  --sidebar-border: #e5e7eb;
+  --sidebar-ring: #ff6b35;
+}
+
+.dark {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --card: #f8f9fa;
+  --card-foreground: #1a1a1a;
+  --popover: #ffffff;
+  --popover-foreground: #1a1a1a;
+  --primary: #ff6b35;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f3f4;
+  --secondary-foreground: #1a1a1a;
+  --muted: #f8f9fa;
+  --muted-foreground: #374151;
+  --accent: #ff6b35;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --border: #e5e7eb;
+  --input: #ffffff;
+  --ring: #ff6b35;
+  --chart-1: #ff6b35;
+  --chart-2: #e55a2b;
+  --chart-3: #cc4921;
+  --chart-4: #b33817;
+  --chart-5: #99270d;
+  --sidebar: #f8f9fa;
+  --sidebar-foreground: #1a1a1a;
+  --sidebar-primary: #ff6b35;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f1f3f4;
+  --sidebar-accent-foreground: #1a1a1a;
+  --sidebar-border: #e5e7eb;
+  --sidebar-ring: #ff6b35;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Sharp-edge light theme styles */
+.weeble-card {
+  background: #f8f9fa;
+  border: 1px solid #e5e7eb;
+  border-radius: 0px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.weeble-button {
+  background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%);
+  border: none;
+  border-radius: 0px;
+  color: white;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(255, 107, 53, 0.2);
+}
+
+.weeble-button:hover {
+  background: linear-gradient(135deg, #e55a2b 0%, #cc4921 100%);
+  box-shadow: 0 2px 4px rgba(255, 107, 53, 0.3);
+  transform: translateY(-1px);
+}
+
+.weeble-nav {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.weeble-section-title {
+  color: #1a1a1a;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.weeble-section-subtitle {
+  color: #6b7280;
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ChatGPT/DeepSeek style sidebar */
+.chatgpt-sidebar {
+  background: #f8f9fa;
+  border-right: 1px solid #e5e7eb;
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 40;
+  transition: transform 0.2s ease;
+  flex-direction: column;
+}
+
+.chatgpt-sidebar.collapsed {
+  transform: translateX(-100%);
+}
+
+@media (max-width: 1023px) {
+  .chatgpt-sidebar {
+    transform: translateX(-100%);
+  }
+  
+  .chatgpt-sidebar.mobile-open {
+    transform: translateX(0);
+  }
+}
+
+.sidebar-header {
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.sidebar-content {
+  padding: 16px;
+  height: calc(100vh - 140px);
+  overflow-y: auto;
+}
+
+.sidebar-footer {
+  padding: 16px;
+  border-top: 1px solid #e5e7eb;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.chat-item {
+  padding: 12px 16px;
+  margin: 2px 0;
+  border-radius: 0px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  font-size: 14px;
+  color: #374151;
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chat-item:hover {
+  background-color: #f1f3f4;
+}
+
+.chat-item.active {
+  background-color: #ff6b35;
+  color: white;
+}
+
+.new-chat-button {
+  background: #ff6b35;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  width: 100%;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  margin-bottom: 16px;
+}
+
+.new-chat-button:hover {
+  background: #e55a2b;
+}
+
+/* Mobile responsive improvements */
+@media (max-width: 640px) {
+  .weeble-card {
+    margin: 0;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .weeble-section-title {
+    font-size: 1.5rem;
+  }
+  
+  .chat-item {
+    padding: 16px;
+    font-size: 16px;
+  }
+  
+  .new-chat-button {
+    padding: 16px;
+    font-size: 16px;
+  }
+}
+
+/* Improve touch targets on mobile */
+@media (pointer: coarse) {
+  .chat-item {
+    min-height: 44px;
+  }
+  
+  button {
+    min-height: 44px;
+  }
+}
+
+/* Themed scrollbars (applies to sidebar and all scroll areas) */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ff6b35 #f8f9fa;
+}
+
+/* WebKit (Chrome/Safari/Edge) */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  border-radius: 0px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 0px;
+  border: none;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #d1d5db;
+}
